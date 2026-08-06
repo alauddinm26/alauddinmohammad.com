@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohammad Ala-Uddin — Communication, AI, Democracy</title>
+<meta name="description" content="Mohammad Ala-Uddin is Assistant Professor of Communication Studies at Saint Mary's College. He studies how AI and digital platforms redistribute communicative power, combining critical theory with computational methods.">
+<meta property="og:title" content="Mohammad Ala-Uddin">
+<meta property="og:description" content="Critical and computational perspectives on AI, media, democracy, and global change.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Person",
+  "name":"Mohammad Ala-Uddin","honorificSuffix":"Ph.D.",
+  "jobTitle":"Assistant Professor of Communication Studies",
+  "affiliation":{"@type":"CollegeOrUniversity","name":"Saint Mary's College","address":"Notre Dame, IN 46556"},
+  "email":"mailto:malauddin@saintmarys.edu",
+  "alumniOf":[
+    {"@type":"CollegeOrUniversity","name":"Bowling Green State University"},
+    {"@type":"CollegeOrUniversity","name":"Ohio University"},
+    {"@type":"CollegeOrUniversity","name":"University of Dhaka"}],
+  "knowsAbout":["global communication and social change","artificial intelligence and society","digital media and democratization","ICT for development","computational-critical discourse analysis","platform governance","gender, communication, and development"],
+  "knowsLanguage":["Bengali","English","Arabic","Urdu"]
+}
+</script>
+<style>
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root{
+  --navy-900:#173A63;--blue-600:#2F6DAA;--slate-600:#56687A;
+  --bg:#FAFBFC;--surface:#FFFFFF;--text:#222831;
+  --gold-500:#C49A3A;--border:#D5DCE5;--paper:#F2EFE9;--rule:#E3E8EF;
+  --success:#2E7D5B;--warning:#9A6700;
+  --sans:"Source Sans 3",system-ui,sans-serif;
+  --display:"Inter",system-ui,sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;--s9:104px;
+  --max:1240px;--measure:730px;--r-sm:10px;--r-md:14px;
+}
+html[data-theme="dark"]{
+  --navy-900:#EEF3F8;--blue-600:#75A7D8;--slate-600:#AAB7C4;
+  --bg:#0E1621;--surface:#151F2B;--text:#EEF3F8;
+  --gold-500:#D3B36C;--border:#2D3A48;--paper:#1A222C;--rule:#243040;
+  --success:#5FBF92;--warning:#D9A93F;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  transition:background-color .2s linear,color .2s linear}
+h1,h2,h3,h4{font-family:var(--display);color:var(--navy-900);letter-spacing:-.02em;margin:0 0 var(--s4)}
+h1{font-size:clamp(2.15rem,4.4vw,3.05rem);font-weight:680;line-height:1.07}
+h2{font-size:clamp(1.6rem,2.6vw,2.05rem);font-weight:640;line-height:1.18}
+h3{font-size:1.26rem;font-weight:620;line-height:1.3}
+h4{font-size:1rem;font-weight:600}
+p{margin:0 0 var(--s4);max-width:var(--measure)}
+a{color:var(--blue-600);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .14s ease}
+a:hover{border-bottom-color:currentColor}
+:focus-visible{outline:3px solid var(--blue-600);outline-offset:3px;border-radius:2px}
+em{font-style:italic}
+.eyebrow{font-family:var(--display);font-size:.72rem;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--slate-600);margin:0 0 var(--s3)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+.measure{max-width:var(--measure)}
+.section{padding:var(--s8) 0}
+.section--paper{background:var(--paper);border-block:1px solid var(--rule)}
+.section--tight{padding-top:0}
+.skip{position:absolute;left:-9999px;background:var(--navy-900);color:#fff;padding:12px 20px;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+.site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--rule)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--s5);min-height:66px}
+.identity{font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--navy-900);border:0;white-space:nowrap}
+.identity span{color:var(--slate-600);font-weight:500}
+.nav{display:flex;align-items:center;gap:var(--s5)}
+.nav a{font-family:var(--display);font-size:.85rem;font-weight:500;color:var(--text);
+  padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:var(--border)}
+.nav a[aria-current="page"]{color:var(--navy-900);font-weight:600;border-bottom-color:var(--blue-600)}
+.util{display:flex;gap:8px}
+.theme-btn,.menu-btn{background:none;border:1px solid var(--border);border-radius:var(--r-sm);
+  width:38px;height:38px;display:grid;place-items:center;cursor:pointer;color:var(--text);font-size:15px}
+.theme-btn:hover,.menu-btn:hover{border-color:var(--blue-600)}
+.menu-btn{display:none}
+
+/* ── HERO ───────────────────────────────────────────────── */
+.hero{padding:var(--s8) 0 var(--s6)}
+.hero-grid{display:grid;grid-template-columns:minmax(230px,300px) 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:var(--r-md);overflow:hidden;background:var(--surface);
+  border:1px solid var(--border);display:grid;place-items:center}
+.portrait img{width:110%;height:110%;object-fit:cover;object-position:center 22%;display:block}
+.portrait-note{font-family:var(--display);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--slate-600);text-align:center;padding:0 var(--s4);line-height:1.8}
+.role{font-family:var(--display);font-size:1rem;font-weight:500;color:var(--slate-600);margin:0 0 var(--s5);line-height:1.55}
+.role strong{color:var(--text);font-weight:600}
+.tagline{font-family:var(--serif);font-size:clamp(1.3rem,2.2vw,1.62rem);line-height:1.42;
+  color:var(--navy-900);max-width:31ch;margin:0 0 var(--s5)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--s5);align-items:center;font-family:var(--display);font-size:.9rem;font-weight:500}
+
+/* ── SIGNATURE: CORPUS BAND ─────────────────────────────── */
+.corpus{padding-bottom:var(--s7)}
+.corpus-head{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s4);
+  flex-wrap:wrap;margin-bottom:var(--s3)}
+.corpus-band{display:flex;align-items:flex-end;gap:3px;height:58px;border-bottom:1px solid var(--navy-900)}
+.corpus-year{flex:1;display:flex;align-items:flex-end;justify-content:center;height:100%;
+  background:none;border:0;padding:0}
+.corpus[data-clickable="1"] .corpus-year{cursor:pointer}
+.corpus-bar{width:100%;max-width:20px;background:var(--slate-600);border-radius:1px 1px 0 0;
+  transform-origin:bottom;opacity:.5;transition:opacity .16s ease,background-color .16s ease}
+.corpus-year:hover .corpus-bar{opacity:1;background:var(--blue-600)}
+.corpus-year[data-on="1"] .corpus-bar{opacity:1;background:var(--navy-900)}
+.corpus-axis{display:flex;gap:3px;margin-top:6px}
+.corpus-axis span{flex:1;text-align:center;font-family:var(--display);font-size:.6rem;color:var(--slate-600)}
+@media(prefers-reduced-motion:no-preference){.corpus-bar{animation:grow .5s cubic-bezier(.2,.7,.3,1) backwards}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+/* ── SPOTLIGHT ──────────────────────────────────────────── */
+.spotlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--s5)}
+.spot{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:var(--s5);display:flex;flex-direction:column;gap:var(--s3);transition:border-color .16s,transform .16s}
+.spot:hover{border-color:var(--blue-600);transform:translateY(-2px)}
+.spot h3{font-size:1.04rem;margin:0}
+.spot p{font-size:.93rem;color:var(--slate-600);margin:0;flex:1}
+.spot .meta{font-family:var(--display);font-size:.71rem;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-600)}
+.spot a{font-family:var(--display);font-size:.83rem;font-weight:500}
+
+/* ── MARGIN APPARATUS ───────────────────────────────────── */
+.entry{display:grid;grid-template-columns:166px 1fr;gap:var(--s6);padding:var(--s6) 0;border-top:1px solid var(--rule)}
+.entry:last-of-type{border-bottom:1px solid var(--rule)}
+.apparatus{display:flex;flex-direction:column;gap:var(--s4)}
+.apparatus dl{margin:0}
+.apparatus dt{font-family:var(--display);font-size:.65rem;font-weight:500;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--slate-600);margin-bottom:3px}
+.apparatus dd{margin:0;font-family:var(--display);font-size:.78rem;font-weight:500;color:var(--text);line-height:1.45}
+.question{font-family:var(--serif);font-size:clamp(1.14rem,1.9vw,1.36rem);line-height:1.45;
+  color:var(--navy-900);margin:0 0 var(--s4);max-width:36ch}
+.entry-body p{font-size:1rem}
+.evidence{display:flex;flex-wrap:wrap;gap:var(--s4);margin-top:var(--s4);font-family:var(--display);font-size:.82rem;font-weight:500}
+
+/* ── CARDS ──────────────────────────────────────────────── */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:var(--s5)}
+.cards--2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:var(--s5)}
+.card h3{margin-bottom:var(--s2)}
+.card p{font-size:.95rem;margin-bottom:var(--s3)}
+.card ul{margin:0;padding-left:18px;font-size:.92rem;color:var(--slate-600)}
+.card .code{font-family:var(--display);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue-600);font-weight:600;display:block;margin-bottom:var(--s2)}
+.card--framework{border-left:2px solid var(--gold-500)}
+.taglist{display:flex;flex-wrap:wrap;gap:var(--s2);padding:0;margin:0;list-style:none}
+.taglist li,.pill{font-family:var(--display);font-size:.74rem;font-weight:500;
+  border:1px solid var(--border);border-radius:999px;padding:4px 12px;color:var(--slate-600);display:inline-block}
+.pill--active{border-color:var(--success);color:var(--success)}
+.pill--review{border-color:var(--blue-600);color:var(--blue-600)}
+.pill--prep{border-color:var(--warning);color:var(--warning)}
+.pill--past{border-color:var(--border);color:var(--slate-600)}
+.quote{font-family:var(--serif);font-size:clamp(1.18rem,2.1vw,1.46rem);line-height:1.52;
+  color:var(--navy-900);border-left:2px solid var(--gold-500);padding-left:var(--s5);
+  margin:var(--s6) 0;max-width:36ch}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s5);
+  padding:var(--s5) 0;border-block:1px solid var(--rule);margin:var(--s6) 0}
+.stat b{display:block;font-family:var(--display);font-size:1.7rem;font-weight:640;color:var(--navy-900);line-height:1.1}
+.stat span{font-family:var(--display);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-600)}
+
+/* ── PUBLICATIONS ───────────────────────────────────────── */
+.filters{display:flex;flex-wrap:wrap;gap:var(--s4);align-items:flex-end;
+  padding:var(--s5) 0;border-block:1px solid var(--rule);margin-bottom:var(--s4)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-family:var(--display);font-size:.67rem;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--slate-600)}
+.field select,.field input{font-family:var(--sans);font-size:.94rem;padding:9px 12px;
+  border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);min-width:168px}
+.field input{min-width:236px}
+.result-count{font-family:var(--display);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--slate-600);margin-left:auto}
+.pub{display:grid;grid-template-columns:132px 1fr;gap:var(--s6);padding:var(--s5) 0;border-top:1px solid var(--rule)}
+.pub:last-child{border-bottom:1px solid var(--rule)}
+.pub-meta{display:flex;flex-direction:column;gap:4px}
+.pub-year{font-family:var(--display);font-size:1.45rem;font-weight:640;color:var(--navy-900);line-height:1}
+.pub-type{font-family:var(--display);font-size:.65rem;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--slate-600)}
+.pub-title{font-family:var(--display);font-size:1.06rem;font-weight:600;color:var(--navy-900);margin:0 0 6px;line-height:1.38}
+.citation{font-size:.94rem;color:var(--slate-600);margin:0 0 var(--s3);max-width:66ch}
+.significance{font-size:.95rem;margin:0 0 var(--s3);max-width:66ch}
+.pub-actions{display:flex;flex-wrap:wrap;gap:var(--s4);align-items:center;font-family:var(--display);font-size:.8rem;font-weight:500}
+.pub-actions button{background:none;border:0;padding:0;cursor:pointer;color:var(--blue-600);
+  font:inherit;border-bottom:1px solid transparent}
+.pub-actions button:hover{border-bottom-color:currentColor}
+.empty{padding:var(--s7) 0;color:var(--slate-600)}
+
+/* ── MISC ───────────────────────────────────────────────── */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--s4)}
+.gal{aspect-ratio:4/3;border:1px dashed var(--border);border-radius:var(--r-md);display:grid;place-items:center;
+  color:var(--slate-600);font-family:var(--display);font-size:.68rem;letter-spacing:.09em;
+.video-frame{position:relative;aspect-ratio:16/9;border-radius:var(--r-sm);
+  overflow:hidden;background:var(--paper);border:1px solid var(--border)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  text-transform:uppercase;text-align:center;padding:var(--s4);line-height:1.8}
+.notice{border-left:2px solid var(--gold-500);background:var(--paper);padding:var(--s4) var(--s5);
+  border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:.93rem;margin:var(--s5) 0;max-width:var(--measure)}
+.notice strong{font-family:var(--display);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  display:block;margin-bottom:4px;color:var(--slate-600)}
+.simple-list{list-style:none;padding:0;margin:0;max-width:var(--measure)}
+.simple-list li{padding:var(--s3) 0;border-top:1px solid var(--rule);font-size:.96rem}
+.simple-list li:last-child{border-bottom:1px solid var(--rule)}
+.simple-list .yr{font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.06em;
+  color:var(--slate-600);display:inline-block;min-width:98px}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+.site-footer{background:var(--navy-900);color:#EEF3F8;margin-top:var(--s9);padding:var(--s8) 0 var(--s6)}
+html[data-theme="dark"] .site-footer{background:var(--surface);border-top:1px solid var(--border);color:var(--text)}
+.site-footer h4{color:#fff;font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;
+  font-weight:500;opacity:.7;margin-bottom:var(--s3)}
+html[data-theme="dark"] .site-footer h4{color:var(--text)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--s6)}
+.site-footer a{color:#EEF3F8;font-size:.93rem}
+html[data-theme="dark"] .site-footer a{color:var(--blue-600)}
+.site-footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.site-footer p{font-size:.92rem;opacity:.82}
+.footer-base{margin-top:var(--s7);padding-top:var(--s4);border-top:1px solid rgba(255,255,255,.16);
+  display:flex;flex-wrap:wrap;gap:var(--s4);justify-content:space-between;font-size:.8rem;opacity:.7}
+html[data-theme="dark"] .footer-base{border-top-color:var(--border)}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:920px){
+  .menu-btn{display:grid}
+  .nav{position:fixed;inset:66px 0 auto 0;background:var(--bg);border-bottom:1px solid var(--border);
+    flex-direction:column;align-items:stretch;gap:0;padding:var(--s4) clamp(20px,5vw,48px) var(--s6);display:none}
+  .nav[data-open="1"]{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--rule);font-size:1rem}
+  .nav a[aria-current="page"]{border-bottom-color:var(--blue-600)}
+  .hero-grid{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .portrait{max-width:250px;width:100%}
+  .tagline,.role,.hero p{max-width:100%}
+  .hero-actions{justify-content:center}
+  .entry,.pub{grid-template-columns:1fr;gap:var(--s4)}
+  .apparatus{flex-direction:row;flex-wrap:wrap;gap:var(--s5)}
+  .pub-meta{flex-direction:row;align-items:baseline;gap:var(--s3)}
+  .pub-year{font-size:1.02rem}
+  .result-count{margin-left:0;width:100%}
+  .field{flex:1 1 100%}
+  .field input,.field select{min-width:0;width:100%}
+  .simple-list .yr{display:block;min-width:0;margin-bottom:2px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="identity" href="#/">Mohammad Ala-Uddin </a>
+    <nav class="nav" id="nav" aria-label="Primary"></nav>
+    <div class="util">
+      <button class="theme-btn" id="theme" aria-label="Switch to dark theme">◐</button>
+      <button class="menu-btn" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Affiliation</h4>
+        <p>Communication Studies, Dance & Theatre<br>Saint Mary's College<br>Notre Dame, IN 46556</p>
+        <p><a href="mailto:malauddin@saintmarys.edu">malauddin@saintmarys.edu</a></p>
+      </div>
+      <div>
+        <h4>Scholarly profiles</h4>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=gEoK730AAAAJ&hl=en">Google Scholar</a></li>
+          <li><a href="https://www.webofscience.com/wos/author/record/AAN-9279-2020">ORCID</a></li>
+          <li><a href="https://www.saintmarys.edu/academics/faculty/mohammad-ala-uddin">Saint Mary's profile </a></li>
+          <li><a href="https://drive.google.com/file/d/1YLc0_x4TveuOJ0mp6R12ZsqHzpb5VNhN/view?usp=sharing">Download CV (PDF)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#/research">Research</a></li>
+          <li><a href="#/publications">Publications</a></li>
+          <li><a href="#/projects">Projects &amp; Initiatives</a></li>
+          <li><a href="#/media">Media &amp; Talks</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#">Accessibility statement</a></li>
+          <li><a href="#">Privacy notice</a></li>
+          <li><a href="#/admin">Analytics (authenticated)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span id="yr"></span> Mohammad Ala-Uddin</span>
+      <span>Bengali · English · Arabic · Urdu</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════════════════
+   CONTENT — all records verified against CV, research
+   statement, teaching philosophy, and petition record.
+   ══════════════════════════════════════════════════════════ */
+const profile = {
+  name:"Mohammad Ala-Uddin",
+  title:"Assistant Professor of Communication Studies",
+  institution:"Saint Mary's College, Notre Dame, Indiana",
+  affiliate:"Faculty Affiliate — Digital and Public Humanities · Global Studies · Gender and Women's Studies",
+  tagline:"Critical computational Researcher of AI, media, democracy, and global change.",
+  intro:"I study how artificial intelligence and digital platforms redistribute communicative power, and what it would take to make them expand rather than constrain human freedoms."
+};
+
+const themes = [
+  {slug:"ai-society", title:"AI, Ethics, and Society",
+   question:"What ethical and governance frameworks are needed for responsible, just, and publicly accountable AI?",
+   summary:"Artificial intelligence is entering journalism, governance, and classroom life faster than the institutions meant to hold it accountable. I treat AI as sociotechnical infrastructure and ask who it benefits, who it marginalizes, and how policy and design might align with plurality and equity — comparing how twelve national news systems frame the technology, and what participatory accountability would demand of institutions rather than individual users.",
+   methods:["Computational text analysis","Framing and sentiment analysis","Comparative design"],
+   regions:["Global","United States","South Asia"],
+   evidence:[{label:"AI news coverage across 12 countries",href:"#/publications"},{label:"Students on AI, authorship, and authenticity",href:"#/projects"}]},
+
+  {slug:"digital-democratization", title:"Digital Media and Democratization",
+   question:"Under what conditions can digital media expand communicative freedom rather than intensify inequality, surveillance, or exclusion?",
+   summary:"The claim that digital media naturally democratizes does not survive contact with the record. I trace the paradox directly: national ICT policy that promises inclusion while enabling a digital security regime, platform community standards that govern speech without public warrant, and communication blackouts that convert technical control into epistemic control during moments of political rupture.",
+   methods:["Critical discourse analysis","Policy corpus analysis","Comparative research"],
+   regions:["Bangladesh","Norway","South Asia"],
+   evidence:[{label:"Discursive power and digital repression",href:"#/publications"},{label:"Platform Panopticon",href:"#/projects"}]},
+
+  {slug:"critical-computational", title:"Critical–Computational Communication",
+   question:"How can computational methods strengthen critical communication research without flattening context, culture, and power?",
+   summary:"Machine learning can read corpora no research team could read by hand, and can just as easily strip away the historical conditions that make a text mean what it means. My methodological work joins large-language-model computation to critical discourse analysis in a single reflexive design, treating model output as a heuristic starting point rather than a finding — scale in the service of interpretation, not as a substitute for it.",
+   methods:["LLM-assisted coding","Topic modeling","Stance profiling","Qualitative memoing"],
+   regions:["Global"],
+   evidence:[{label:"CDA-C methodology",href:"#/research"},{label:"3,399 articles on the July 2024 uprising",href:"#/projects"}]},
+
+  {slug:"global-social-change", title:"Global Communication and Social Change",
+   question:"How do media systems in South Asia and the Global South shape political legitimacy, public knowledge, and social change?",
+   summary:"Development discourse routinely technologizes its own goals, converting questions of empowerment and justice into questions of connectivity and access. I read that substitution closely — in the 2030 Agenda, in gender-equality frameworks, in ICT4D scholarship, in comparative news discourse on digitalization — and argue for communication as a capability rather than a delivery channel.",
+   methods:["Critical discourse analysis","Textual analysis","Comparative research"],
+   regions:["Global South","Bangladesh","India","Kenya","Norway"],
+   evidence:[{label:"\u201CSustainable\u201D discourse",href:"#/publications"},{label:"Gender equality and sustainable development",href:"#/publications"}]},
+
+  {slug:"communication-freedom", title:"Communication as Freedom",
+   question:"How can communication theory explain freedom as both a normative ideal and a practical social capability?",
+   summary:"Freedom is usually theorized as the absence of constraint. I argue instead that communicative freedom is a capability with four dimensions — to have voice, to be recognized, to exercise counter-power, and to secure legitimacy — and that these together form the fulcrum on which democratic resilience rests. The framework draws Habermas, Foucault, and Sen into sustained dialogue rather than treating them as incompatible traditions.",
+   methods:["Normative theory","Critical synthesis","Capabilities approach"],
+   regions:["Global"],
+   evidence:[{label:"Communication as Critical Freedom",href:"#/research"}]}
+];
+
+const frameworks = [
+  {name:"Communication as Critical Freedom (CCF)", kind:"Theoretical framework",
+   body:"CCF reconceptualizes communication as the central capability through which human freedoms are enacted, constrained, or contested. Critical communicative freedom is defined as the capability to have voice, to be recognized, to exercise counter-power, and to secure legitimacy — together forming what the framework calls a fulcrum of justice. Developed in the dissertation; a full theoretical manuscript is currently under review for publication at the Journal of Communication.",
+   sources:"Habermasian discourse ethics · Foucauldian power · Sen's capabilities approach · post- and decolonial theory"},
+  {name:"Computational–Critical Discourse Analysis (CDA-C)", kind:"Methodological framework",
+   body:"CDA-C integrates LLM-based text embeddings, clustering, and stance profiling with critical discourse analysis in two interlinked phases: computational discovery, then critical interpretation. Model outputs are treated as heuristic starting points, not objective findings, so that large corpora can be read at scale without losing attention to power, ideology, and representation. Applied to fifteen years of Bangladeshi and Norwegian policy and news discourse, and to 3,399 articles on the July 2024 uprising.",
+   sources:"Topic modeling · LLM-assisted coding · Foucauldian discourse analysis · qualitative memoing"}
+];
+
+const projects = [
+  {title:"Communication as Critical Freedom", status:"active", label:"Manuscript under review",
+   period:"Ongoing", venue:"Journal of Communication",
+   summary:"A normative framework reconceptualizing communicative freedom as a capability grounded in voice, recognition, counter-power, and legitimacy, applied to AI content moderation, misinformation, and civic silence.",
+   theme:"communication-freedom"},
+  {title:"CDA-C: Toward a \u201Cthick\u201D reading of data", status:"active", label:"Manuscript in preparation",
+   period:"Ongoing", venue:"Communication Methods and Measures",
+   summary:"Formalizes Computational–Critical Discourse Analysis as a reflexive, auditable workflow, demonstrated through a study of 3,399 news articles on the July 2024 student-mass uprising in Bangladesh.",
+   theme:"critical-computational"},
+  {title:"Discursive power and digital repression", status:"in press", label:"Chapter forthcoming",
+   period:"2025–2026", venue:"Bloomsbury Academic",
+   summary:"How local, regional, and global news media constructed the July 2024 uprising and the state-imposed communication blackouts that accompanied it. Nine media systems; Western outlets framed blackouts as democratic crisis, South Asian and Middle Eastern outlets as routine governance.",
+   theme:"digital-democratization"},
+  {title:"Market logics and digital futures", status:"progress", label:"In preparation",
+   period:"Ongoing", venue:"Information, Communication & Society",
+   summary:"Comparative CDA-C analysis of how Bangladeshi and Norwegian news discourse construct competing imaginaries of digitalization — a \u201Cdigital proletariat\u201D and a \u201Cdigital bourgeoisie\u201D in the global hierarchy of technocapital.",
+   theme:"global-social-change"},
+  {title:"Technocapital determinism or digital democratization?", status:"progress", label:"In preparation",
+   period:"Ongoing", venue:"Policy & Internet",
+   summary:"Comparative analysis of digital policy documents tracking the tension between growth-centric and democracy-centric governance frames.",
+   theme:"digital-democratization"},
+  {title:"Platform Panopticon and digital governmentality", status:"progress", label:"In progress",
+   period:"Ongoing", venue:"",
+   summary:"Community standards across Facebook, X/Twitter, YouTube, Instagram, and TikTok, mapping how moderation and safety policy reconfigure speech, visibility, and accountability.",
+   theme:"digital-democratization"},
+  {title:"Crisis of authenticity in digital freedom", status:"progress", label:"In progress",
+   period:"Ongoing", venue:"New Media & Society",
+   summary:"Cybersecurity and surveillance discourse in South Asia and its implications for rights and democratic participation.",
+   theme:"digital-democratization"},
+  {title:"Students on AI, authorship, and authenticity", status:"active", label:"Active — data collection",
+   period:"2025–2026", venue:"",
+   summary:"Six focus groups with first-year students in the AI and the Future of Communication seminar, compared with three groups outside AI-themed courses, examining how generative AI reshapes perceptions of originality, learning, and communicative agency — and developing instruments for measuring communicative capability.",
+   theme:"ai-society"},
+  {title:"Communicating in the Age of Artificial Intelligence", status:"active", label:"Active — funded",
+   period:"2025–2026", venue:"", funding:"First Year Seminar Program Grant, Saint Mary's College — $5,000",
+   summary:"Curriculum development treating AI literacy as civic preparation: students work with generative systems directly while analyzing how those systems redistribute authority over information.",
+   theme:"ai-society"},
+  {title:"AI and Global Policy Futures", status:"developing", label:"Book project — in development",
+   period:"Long term", venue:"",
+   summary:"A solo-authored book mapping national and transnational policy responses to generative AI, combining policy corpus analysis with elite interviews across EU risk-based regimes, US sectoral models, and South Asian and African hybrid approaches. The central claim: AI governance embeds contested theories of democracy and development.",
+   theme:"ai-society"}
+];
+
+const initiatives = [
+  {name:"Center for South Asian Media and Culture (CSAMC)", role:"Co-Founder and Deputy Director", state:"current",
+   body:"A research center on media, culture, and democratic discourse in and beyond South Asia. I helped found the Center, shape its research and programming agenda, and direct its scholarly initiatives."},
+  {name:"The Insighta", role:"Managing Editor · Founding Director, The Insighta Media Inc.", state:"current",
+   body:"A U.S.-based public-scholarship platform translating research on democracy, media, and digital policy for public and policy audiences. This site does not duplicate the platform's archive.",
+   link:"https://theinsighta.com"},
+  {name:"Center for Critical AI Studies (CCAS)", role:"In development", state:"planned",
+   body:"A proposed campus-facing research program: capability metrics assessing how generative AI expands or constrains voice — especially for non-native English speakers — multiscalar governance mapping, and epistemic security work through CDA-C 2.0 and design-justice prototypes."},
+  {name:"Global AI Justice Initiative (GAJI)", role:"In development", state:"planned",
+   body:"A proposed translational vehicle for multi-country partnerships with universities, civil society, and policy actors: piloting inclusive AI in low-resource multilingual contexts and convening regulators, standards bodies, and platforms on transparency and provenance."},
+  {name:"Algorithms, Big Data, and Culture (ABDC) Research Group", role:"Researcher, 2017–2019", state:"past",
+   body:"Bowling Green State University. Project: mobile money narratives in Kenya, Bangladesh, and India, with Dr. Saif Shahin."}
+];
+
+const publications = [
+  /* ── Journal articles ── */
+  {type:"article", year:2024, slug:"ai-12-countries",
+   title:"Global news media coverage of artificial intelligence (AI): A comparative analysis of frames, sentiments, and trends across 12 countries",
+   authors:"Ittefaq, M., Zain, A., Arif, R., Ala-Uddin, M., Ahmad, T., & Iqbal, A.",
+   venue:"Telematics and Informatics", detail:"96, 102223", doi:"10.1016/j.tele.2024.102223",
+   significance:"Twelve national news systems frame AI in measurably different terms, and those differences track political and economic context rather than the technology itself — which matters for any governance regime assuming a shared public understanding.",
+   themes:["ai-society","critical-computational"]},
+  {type:"article", year:2019, slug:"sustainable-discourse",
+   title:"\u201CSustainable\u201D discourse: A critical analysis of the 2030 agenda for sustainable development",
+   authors:"Ala-Uddin, M.", venue:"Asia Pacific Media Educator",
+   detail:"29(2), 1–11 — lead article, special issue on media and communication in development and social change",
+   doi:"10.1177/1326365X19881515",
+   significance:"The 2030 Agenda's language converts development into a technical and economic program, quietly displacing empowerment and social justice from the frame it claims to advance.",
+   themes:["global-social-change"]},
+  {type:"article", year:2019, slug:"ict4d-review",
+   title:"Review essay of Information and Communication Technology for Development (ICT4D)",
+   authors:"Ala-Uddin, M.", venue:"Asia Pacific Media Educator",
+   detail:"29(2), 1–4 — review essay of the volume edited by Richard Heeks", doi:"10.1177/1326365X19886979",
+   significance:"Where ICT4D scholarship still under-theorizes power, cultural context, and justice.",
+   themes:["global-social-change"]},
+  {type:"article", year:2014, slug:"ports-renewable",
+   title:"From uranium enrichment to renewable energy: Conversion of the US-DOE's former Portsmouth Gaseous Diffusion Plant (PORTS) into a clean energy production facility",
+   authors:"Flournoy, D., Roth, S., & Ala-Uddin, M.", venue:"Online Journal of Space Communication", detail:"10(17), 15",
+   significance:"An interdisciplinary proposal for repurposing decommissioned nuclear infrastructure, which subsequently informed a $19 million NSF proposal.",
+   themes:[]},
+
+  /* ── Book chapters ── */
+  {type:"chapter", year:2026, forthcoming:true, slug:"digital-repression",
+   title:"Discursive power and digital repression: Global media narratives of the July 2024 uprising",
+   authors:"Ala-Uddin, M.",
+   venue:"Critical media perspectives on the July 2024 Bangladesh uprising",
+   detail:"M. H. Rahman & D. Islam (Eds.). Bloomsbury",
+   significance:"A corpus of 3,399 articles across nine media systems shows communication blackouts framed not as technical disruption but as discursive acts redefining legitimacy, dissent, and civic freedom. Operationalizes CDA-C.",
+   themes:["digital-democratization","critical-computational"]},
+  {type:"chapter", year:2026, forthcoming:true, slug:"dial-m",
+   title:"Dial M for money: Transnational narratives of mobile money in the global south",
+   authors:"Shahin, S., Ala-Uddin, M., Verma, T., & Matanji, F. B.",
+   venue:"Handbook of communication and media in the global south",
+   detail:"D. K. Thussu & S. Roy (Eds.). Routledge",
+   significance:"Across news corpora from Bangladesh, India, and Kenya, mobile money is narrated as financial inclusion while functioning as something considerably more ambivalent.",
+   themes:["critical-computational","global-social-change"]},
+  {type:"chapter", year:2021, slug:"gender-paradox",
+   title:"The paradox in discourse and praxis of gender equality: A communicative framework for sustainable development",
+   authors:"Ala-Uddin, M.",
+   venue:"The Palgrave handbook of international communication and sustainable development",
+   detail:"M. J. Yusha'u & J. Servaes (Eds.), pp. 235–257. Palgrave Macmillan",
+   doi:"10.1007/978-3-030-69770-9_11",
+   significance:"\u201CEquality\u201D and \u201Cempowerment\u201D as used in global development frameworks fail the test of gender justice. The chapter offers a communication-centered alternative grounded in the capabilities approach.",
+   themes:["global-social-change"]},
+
+  /* ── Manuscripts in preparation ── */
+  {type:"manuscript", year:2026, slug:"ccf-manuscript",
+   title:"Communication as critical freedom: Voice, power, and capability for justice",
+   authors:"Ala-Uddin, M.", venue:"Manuscript under review", detail:"Journal of Communication",
+   themes:["communication-freedom"]},
+  {type:"manuscript", year:2026, slug:"cdac-manuscript",
+   title:"Unveiling contextual depths in textual corpora: A computational-critical discourse analysis toward a \u201Cthick\u201D reading of data",
+   authors:"Ala-Uddin, M.", venue:"Manuscript in preparation", detail:"for submission to Communication Methods and Measures",
+   themes:["critical-computational"]},
+  {type:"manuscript", year:2026, slug:"market-logics",
+   title:"Market logics and digital futures: Comparative news discourses on digitalization in Bangladesh and Norway",
+   authors:"Ala-Uddin, M.", venue:"Manuscript in preparation", detail:"for submission to Information, Communication & Society",
+   themes:["global-social-change","digital-democratization"]},
+
+  /* ── Conference papers ── */
+  {type:"conference", year:2026, slug:"ccf-nca",
+   title:"Communication as critical freedom: Toward a normative framework for communicative justice",
+   authors:"Ala-Uddin, M.", venue:"accepted as top paper to present at the 112th NCA Annual Convention", detail:"New Orleans, LA, November 19–22",
+   themes:["communication-freedom"]},
+   {type:"conference", year:2025, slug:"gen-z-panel", role:"Panel chair",
+   title:"From rights movement to regime change: Postmodern resistance through postdigital activism in world's first Gen-Z revolution in Bangladesh",
+   authors:"Ala-Uddin, M. (Panel Chair)", venue:"NCA Annual Convention", detail:"Denver, CO",
+   themes:["digital-democratization"]},
+  {type:"conference", year:2025, slug:"authoritarianism",
+   title:"Sustaining vs. challenging authoritarianism: The role of news media in Bangladesh",
+   authors:"Ali, M., & Ala-Uddin, M.", venue:"ICA Annual Conference", detail:"Denver, CO",
+   themes:["digital-democratization","global-social-change"]},
+  {type:"conference", year:2025, slug:"bubble-autocracy",
+   title:"Creating the bubble around autocracy: News media's role in challenging and sustaining Sheikh Hasina's regime in the global south",
+   authors:"Ali, M., Islam, D., & Ala-Uddin, M.", venue:"ICA Annual Conference", detail:"Denver, CO",
+   themes:["digital-democratization","global-social-change"]},
+  {type:"conference", year:2024, slug:"ai-iamcr",
+   title:"News coverage of artificial intelligence in 12 countries (2013–2023)",
+   authors:"Ittefaq, M., Zain, A., Khan, M. L., Ahmad, T., Iqbal, A., & Ala-Uddin, M.",
+   venue:"IAMCR", detail:"Christchurch, New Zealand", themes:["ai-society","critical-computational"]},
+  {type:"conference", year:2023, slug:"crisis-authenticity-ica",
+   title:"Crisis of authenticity in digital freedom: Understanding cybersecurity policy and surveillance practices in South Asia",
+   authors:"Ala-Uddin, M., & Ittefaq, M.", venue:"ICA Annual Conference",
+   detail:"Communication Law and Policy Division", themes:["digital-democratization"]},
+  {type:"conference", year:2022, slug:"development-paradox",
+   title:"From digitalization to development paradox: A critical reflection on Bangladeshi national ICT policy and practice",
+   authors:"Ala-Uddin, M.", venue:"108th NCA Convention", detail:"New Orleans, LA",
+   themes:["digital-democratization","global-social-change"]},
+  {type:"conference", year:2019, slug:"road-safety",
+   title:"(Mis)communicating student protest for road safety in Bangladesh: A critical evaluation of state response",
+   authors:"Ala-Uddin, M.", venue:"NCA Convention", detail:"Baltimore, MD", themes:["digital-democratization"]},
+  {type:"conference", year:2019, slug:"dial-m-ica",
+   title:"Dial M for money: Transnational narratives of mobile money in the global south",
+   authors:"Shahin, S., Ala-Uddin, M., Varma, T., & Matanji, F.", venue:"69th ICA Conference", detail:"Washington, D.C.",
+   themes:["critical-computational","global-social-change"]},
+  {type:"conference", year:2018, slug:"digital-security-act",
+   title:"Digitalizing public services and the rising development paradox: A critical reflection on the Bangladeshi national ICT policy and the Digital Security Act",
+   authors:"Ala-Uddin, M.", venue:"IAMCR Conference", detail:"University of Oregon", themes:["digital-democratization"]},
+  {type:"conference", year:2018, slug:"sdg5",
+   title:"The paradox at the declarations of intent and the practical action to improve gender equality and justice: A conceptual framework for SDG 5",
+   authors:"Ala-Uddin, M.", venue:"IAMCR Conference", detail:"University of Oregon", themes:["global-social-change"]},
+  {type:"conference", year:2017, slug:"social-justice-women",
+   title:"Advancing social justice for women within Islamic framework: A South Asian case",
+   authors:"Ala-Uddin, M.", venue:"6th Annual GCA Conference", detail:"Bowling Green State University",
+   themes:["global-social-change"]},
+  {type:"conference", year:2017, slug:"sultanas-dream",
+   title:"\u201CTables are turned\u201D: A pursuit of gender justice in Sultana's Dream",
+   authors:"Ala-Uddin, M.", venue:"6th Annual GCA Conference", detail:"Bowling Green State University",
+   themes:["global-social-change"]},
+  {type:"conference", year:2017, slug:"digital-bangladesh",
+   title:"\u201CDigital Bangladesh\u201D: Discourse and deconstruction",
+   authors:"Ala-Uddin, M.", venue:"Central States Communication Association", detail:"Minneapolis, MN",
+   themes:["digital-democratization"]},
+  {type:"conference", year:2016, slug:"transforming-world",
+   title:"\u201CTransforming our world\u201D and the paradox of global partnership in SDGs: A conceptual framework for social justice and empowerment",
+   authors:"Ala-Uddin, M.", venue:"IAMCR Conference", detail:"University of Leicester, U.K.",
+   themes:["global-social-change"]},
+  {type:"conference", year:2013, slug:"bbc-janala-sss",
+   title:"Defying Bangladeshi gender stereotypes: A social semiology of BBC Janala",
+   authors:"Ala-Uddin, M.", venue:"Semiotic Society of America Annual Meeting", detail:"Dayton, OH",
+   themes:["global-social-change"]},
+  {type:"conference", year:2013, slug:"migrants-mobiles",
+   title:"Migrants, mobiles, and modernity: A chemistry of capitalism",
+   authors:"Ala-Uddin, M.", venue:"Global Fusion Conference", detail:"Southern Illinois University",
+   themes:["global-social-change"]},
+  {type:"conference", year:2013, slug:"bbc-janala-gender",
+   title:"Representation of gender in BBC Janala",
+   authors:"Ala-Uddin, M.", venue:"25th Ethnographic and Qualitative Research Conference", detail:"Cedarville University, OH",
+   themes:["global-social-change"]},
+  {type:"conference", year:2011, slug:"foi-law",
+   title:"Freedom of information law in Bangladesh: Is information reachable?",
+   authors:"Ala-Uddin, M.", venue:"International Seminar on Freedom of Expression", detail:"University of Dhaka",
+   themes:["digital-democratization"]},
+
+  /* ── Public scholarship ── */
+  {type:"public", year:2025, slug:"development-or-deception",
+   title:"Development or deception? The myth of progress under the fallen Hasina regime",
+   authors:"Ala-Uddin, M.", venue:"The Insighta", detail:"March 1, 2025",
+   url:"https://theinsighta.com/p/development-or-deprivation-the-illusion",
+   significance:"How a development record was constructed rhetorically, and what it concealed.",
+   themes:["global-social-change","digital-democratization"]},
+  {type:"public", year:2024, slug:"reforming-communication",
+   title:"Reforming communication in new Bangladesh: Towards sustainable and independent media",
+   authors:"Panel speaker", venue:"Bangladeshi Communication Scholars in North America", detail:"September 29, 2024",
+   themes:["global-social-change"]},
+  {type:"public", year:2023, slug:"faith-in-valley",
+   title:"Faith in the valley: Muslim festivals across cultures",
+   authors:"Invited speaker", venue:"Lifelong Learning Institute, James Madison University", detail:"",
+   themes:[]},
+  {type:"public", year:2021, slug:"lessons-social-justice",
+   title:"Lessons of social justice from Prophet Mohammad",
+   authors:"Invited speaker", venue:"Interfaith Association and Valley Muslim Community Foundation",
+   detail:"Harrisonburg, VA", themes:[]},
+  {type:"public", year:2010, slug:"press-freedom-bd",
+   title:"State of press freedom in Bangladesh",
+   authors:"Invited speaker", venue:"Nordic Summer Camp", detail:"Jyväskylä, Finland",
+   themes:["digital-democratization"]}
+];
+
+const courses = [
+  {title:"AI and the Future of Communication", inst:"Saint Mary's College", tag:"First-Year Seminar",
+   premise:"What happens to human communication when the systems mediating it begin to generate it.",
+   focus:["Structured dialogue on the ethical, cultural, and societal dimensions of AI","Analyzing one's own social media feed for algorithmic bias","Team research presentations linking theory to current cases","AI literacy as civic preparation"]},
+  {title:"Intercultural Communication", inst:"Saint Mary's College · James Madison University", tag:"",
+   premise:"How people communicate across cultural difference, and what power does inside those encounters.",
+   focus:["Cultural narratives, media representation, and social structure","Comparing scholarly perspectives against lived experience","Collaborative research-based projects"]},
+  {title:"Critical Issues in Mass Communication", inst:"Saint Mary's College", tag:"",
+   premise:"Contemporary media problems read through the question of who holds power over public discourse.",
+   focus:["Media bias and ownership","Platform governance and algorithmic curation","Case-based analysis of real controversies"]},
+  {title:"Public Communication", inst:"Saint Mary's College", tag:"",
+   premise:"Advocacy and public address as ethical practice, tested against real problems.",
+   focus:["Audience analysis and message design","Ethical communication as civic practice"]},
+  {title:"Argumentation and Advocacy", inst:"Saint Mary's College", tag:"",
+   premise:"Reasoning, evidence, and the discipline of making a case others can evaluate.",
+   focus:["Claim, warrant, and evidence","Deliberation across disagreement"]},
+  {title:"Introduction to Communication Studies", inst:"Saint Mary's College", tag:"",
+   premise:"The field's central questions, from interpersonal meaning-making to mediated publics.",
+   focus:["Foundational theory","Research literacy"]}
+];
+
+const pastCourses = [
+  "Culture and Health Communication — James Madison University",
+  "New Media and Health — James Madison University",
+  "Introduction to Communication Research — James Madison University",
+  "Fundamentals of Human Communication — James Madison University",
+  "Introduction to Journalism in Democratic Society — Bowling Green State University",
+  "Introduction to Public Speaking — Bowling Green State University"
+];
+
+const awards = [
+  {year:"2026", name:"Top Paper Award",
+   org:"The Philosophy of Communication Division, National Communication Association",
+   note:"Recognizes at the 112th NCA Annual Convention, New Orleans, LA."},
+  {year:"2025", name:"Best Reviewer Award",
+   org:"Environmental Communication Division, National Communication Association",
+   note:"Recognizes the quality of conference paper review for the division's 2025 program. Conferred at the NCA Annual Convention, Denver, CO."},
+  {year:"2022", name:"Top Dissertation Award",
+   org:"Human Communication and Technology Division, National Communication Association",
+   note:"For Reclaiming the \u201CC\u201D in ICT4D: A Critical Examination of Discursive (Un)Freedoms in Digital State Policy and News Media of Bangladesh and Norway."},
+  {year:"2008–2010", name:"NORAD Fellowship",
+   org:"Norwegian Agency for Development Cooperation (NORAD)", note:"NORAD's Programme for Master Studies (NOMA) in Journalism, Media and Communication"}
+];
+
+const talks = [
+  {year:"2025", title:"Global/Digital Media", venue:"GLST 101: Introduction to Global Studies, Saint Mary's College", role:"Guest lecture"},
+  {year:"2022", title:"Digital advocacy and transnational activism", venue:"SCOM 500: Introduction to Advocacy Studies, James Madison University", role:"Guest lecture"},
+  {year:"2018", title:"ICT for development and the capabilities approach", venue:"MC 7630: Global Communication and Social Change, Bowling Green State University", role:"Guest lecture"},
+  {year:"2018", title:"Theory and application of qualitative interviewing", venue:"MDIA 3600: Media Research, Bowling Green State University", role:"Guest lecture"},
+  {year:"2017", title:"Global media and inequalities in Bangladeshi contexts", venue:"COMM 2100: Communicating in Global Context, Bowling Green State University", role:"Guest lecture"},
+  {year:"2016", title:"History and political trajectory of Bangladesh", venue:"ASIA 4800, Asian Studies Program, Bowling Green State University", role:"Guest lecture"}
+];
+
+const mediaItems = [
+  {period:"2024–present", outlet:"TBN News 24", program:"Our Democracy", role:"Recurring panel guest",
+   body:"Discussions on democracy, governance, and media in the United States and South Asia."},
+  {period:"2024", outlet:"TBN News 24", program:"Road to White House", role:"Panel guest",
+   body:"Election coverage panels, November 2 and November 4."},
+  {period:"2011", outlet:"Diganta Television", program:"Religious Thoughts", role:"Panelist",
+   body:"Religiosity, free expression, and modernity."}
+];
+
+const conferenceRoles = [
+  {year:"2025", text:"Respondent, \u201CRadical Intimacies: Feminine Futures in Film, Flesh, and Fire\u201D panel, NCA, Denver, CO"},
+  {year:"2025", text:"Panel Chair, \u201CFrom Rights Movement to Regime Change,\u201D NCA, Denver, CO"},
+  {year:"2019", text:"Session Chair, \u201CSustainable Development: Paradoxes, Promises and Challenges for Women in News Media,\u201D IAMCR"}
+];
+
+const routes = [["#/","Home"],["#/research","Research"],["#/teaching","Teaching"],
+  ["#/projects","Projects & Initiatives"],["#/publications","Publications"],["#/media","Media & Talks"]];
+
+const typeLabels = {article:"Journal article", chapter:"Book chapter",
+  manuscript:"Manuscript in preparation", conference:"Conference paper", public:"Public scholarship"};
+
+const spotlight = [
+  {kind:"Recognition", meta:"2026 · NCA", title:"Top Paper Award",
+   body:"The Philosophy of Communication, Theory, Critique Division of the National Communication Association recognizes Communication as Critical Freedom as Top Paper at the 2026 convention in New Orleans, LA.", href:"#/research"},
+  {kind:"Theoretical Framework", meta:"Under review · Journal of Communication", title:"Communication as Critical Freedom",
+   body:"A normative framework treating communicative freedom as a capability: voice, recognition, counter-power, legitimacy.", href:"#/research"},
+  {kind:"Forthcoming chapter", meta:"Bloomsbury Academic", title:"Discursive power and digital repression",
+   body:"How nine media systems narrated the communication blackouts during Bangladesh's July 2024 uprising — 3,399 articles read through CDA-C.", href:"#/publications"},
+  {kind:"Teaching", meta:"2025–2026 · Funded seminar", title:"AI and the Future of Communication",
+   body:"A first-year seminar where students work with generative systems while analyzing how those systems redistribute authority over information.", href:"#/teaching"}
+];
+
+/* ══════════════════════════════════════════════════════════
+   HELPERS
+   ══════════════════════════════════════════════════════════ */
+const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const themeTitle = slug => (themes.find(t=>t.slug===slug)||{}).title || slug;
+
+function citation(p){
+  let s = `${esc(p.authors)} (${p.year}${p.forthcoming?', forthcoming':''}). ${esc(p.title)}. <em>${esc(p.venue)}</em>`;
+  if(p.detail) s += `, ${esc(p.detail)}`;
+  return s + '.';
+}
+function plain(p){
+  let s = `${p.authors} (${p.year}${p.forthcoming?', forthcoming':''}). ${p.title}. ${p.venue}`;
+  if(p.detail) s += `, ${p.detail}`;
+  return s + '.';
+}
+
+function corpusData(){
+  const c={}; publications.forEach(p=>{c[p.year]=(c[p.year]||0)+1});
+  const ys=Object.keys(c).map(Number), from=Math.min(...ys), to=Math.max(...ys), out=[];
+  for(let y=from;y<=to;y++) out.push({year:y,n:c[y]||0});
+  return out;
+}
+
+function corpusBand(clickable){
+  const d=corpusData(), max=Math.max(...d.map(x=>x.n));
+  const bars=d.map((x,i)=>{
+    const h = x.n===0 ? 2 : Math.round((x.n/max)*100);
+    const tag = clickable?'button':'div';
+    const on = clickable && String(pubState.year)===String(x.year);
+    return `<${tag} class="corpus-year"${clickable?` type="button" data-year="${x.year}" aria-pressed="${on}"`:''}${on?' data-on="1"':''} title="${x.year}: ${x.n} record${x.n===1?'':'s'}"><span class="corpus-bar" style="height:${h}%;animation-delay:${i*20}ms"></span></${tag}>`;
+  }).join('');
+  const axis=d.map(x=>`<span>${(x.year%5===0||x.year===d[0].year||x.year===d[d.length-1].year)?"'"+String(x.year).slice(2):''}</span>`).join('');
+  return `<div class="corpus" data-clickable="${clickable?1:0}">
+    <div class="corpus-head">
+      <p class="eyebrow" style="margin:0">The record, by year</p>
+      <p class="eyebrow" style="margin:0">${publications.length} scholarly outputs · ${d[0].year}–${d[d.length-1].year}</p>
+    </div>
+    <div class="corpus-band" role="img" aria-label="Publications, presentations, and public scholarship by year, ${d[0].year} to ${d[d.length-1].year}.">${bars}</div>
+    <div class="corpus-axis" aria-hidden="true">${axis}</div>
+  </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PAGES
+   ══════════════════════════════════════════════════════════ */
+function pageHome(){
+  return `
+  <section class="wrap hero">
+    <div class="hero-grid">
+      <div class="portrait"><img src="AlaUddin_Portrait.webp" alt="Mohammad Ala-Uddin" width="800" height="1000"></div>
+      <div>
+        <h1>Mohammad Ala-Uddin</h1>
+        <p class="role"><strong>${esc(profile.title)}</strong><br>${esc(profile.institution)}<br>
+          <span style="font-size:.88rem">${esc(profile.affiliate)}</span></p>
+        <p class="tagline">${esc(profile.tagline)}</p>
+        <p style="font-size:1.02rem;max-width:46ch">${esc(profile.intro)}</p>
+        <div class="hero-actions">
+          <a href="#/research">Explore the research →</a>
+          <a href="#/publications">Publications</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">${corpusBand(false)}</section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <p class="eyebrow">Spotlight</p>
+      <h2 style="margin-bottom:var(--s6)">Current work</h2>
+      <div class="spotlight">
+        ${spotlight.map(s=>`<article class="spot">
+          <p class="meta">${esc(s.kind)}</p>
+          <h3>${esc(s.title)}</h3>
+          <p>${esc(s.body)}</p>
+          <p class="meta">${esc(s.meta)}</p>
+          <a href="${s.href}">Read more →</a>
+        </article>`).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+
+function pageResearch(){
+  return `
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Research</p>
+      <h1 style="max-width:22ch">Critical–computational communication</h1>
+      <div class="measure">
+        <p>I study how artificial intelligence and digital platforms redistribute communicative power, and what it would take to make them expand rather than constrain human freedoms. My work treats AI as sociotechnical infrastructure and asks who it benefits, who it marginalizes, and how governance, policy, and design might align with plurality, equity, and democratic values.</p>
+        <p>Across empirical, methodological, and theoretical strands, this amounts to a coherent agenda: rigorous analysis of data and algorithms, anchored in normative commitments to justice, inclusion, and capability. Early work interrogated the political economy of digital development in the Global South, showing how technocratic imaginaries mask inequality and crises of legitimacy. That foundation now extends into critical AI studies.</p>
+      </div>
+      <blockquote class="quote">The purpose of technology in development should be to expand human freedoms, not to constrain them.</blockquote>
+    </div>
+  </section>
+
+  <section class="section--paper" style="padding:var(--s7) 0">
+    <div class="wrap">
+      <p class="eyebrow">Research questions</p>
+      ${themes.map(t=>`<article class="entry" id="${t.slug}">
+        <div class="apparatus">
+          <dl><dt>Theme</dt><dd>${esc(t.title)}</dd></dl>
+          <dl><dt>Methods</dt><dd>${t.methods.map(esc).join('<br>')}</dd></dl>
+          <dl><dt>Contexts</dt><dd>${t.regions.map(esc).join(', ')}</dd></dl>
+        </div>
+        <div class="entry-body">
+          <p class="question">${esc(t.question)}</p>
+          <p>${esc(t.summary)}</p>
+          <div class="evidence">${t.evidence.map(e=>`<a href="${e.href}">${esc(e.label)} →</a>`).join('')}</div>
+        </div>
+      </article>`).join('')}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Frameworks</p>
+      <h2>Two contributions the work is built on</h2>
+      <p class="measure">One theoretical, one methodological. Both originate in the dissertation and are being developed for the field's leading venues.</p>
+      <div class="cards cards--2" style="margin-top:var(--s5)">
+        ${frameworks.map(f=>`<article class="card card--framework">
+          <span class="code" style="color:var(--gold-500)">${esc(f.kind)}</span>
+          <h3>${esc(f.name)}</h3>
+          <p>${esc(f.body)}</p>
+          <p class="eyebrow" style="margin:0 0 4px">Draws on</p>
+          <p style="font-size:.88rem;color:var(--slate-600);margin:0">${esc(f.sources)}</p>
+        </article>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">Methods</p>
+      <h2>How the work is done</h2>
+      <p class="measure">Critical and interpretive theory sets the questions; computational technique extends the reach. Large-language-model methods make it possible to read corpora of thousands of documents, but the interpretation stays historical, cultural, and political. Model output is a starting point for inquiry, never a finding on its own.</p>
+      <ul class="taglist" style="margin-top:var(--s5)">
+        ${["Critical discourse analysis","Computational text analysis","LLM-assisted coding","Topic modeling","Stance profiling","Framing and sentiment analysis","Policy corpus analysis","Comparative research design","Focus groups and qualitative interviewing","Social semiotics"].map(m=>`<li>${esc(m)}</li>`).join('')}
+      </ul>
+      <div class="stat-row">
+        <div class="stat"><b>Python · R</b><span>Text mining and analytics</span></div>
+        <div class="stat"><b>TopicGPT · spaCy</b><span>NLP and topic discovery</span></div>
+        <div class="stat"><b>NVivo · SPSS</b><span>Qualitative and statistical analysis</span></div>
+        <div class="stat"><b>Netlytic · NLTK</b><span>Network and corpus tools</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">Recognition</p>
+      <h2>Awards and fellowships</h2>
+      <div class="cards">
+        ${awards.map(a=>`<article class="card">
+          <span class="code" style="color:var(--gold-500)">${esc(a.year)}</span>
+          <h3>${esc(a.name)}</h3>
+          <p style="color:var(--slate-600)">${esc(a.org)}</p>
+          ${a.note?`<p style="font-size:.9rem;margin:0">${esc(a.note)}</p>`:''}
+        </article>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">Scholarly service</p>
+      <h2>Reviewing and adjudication</h2>
+      <p class="measure">Manuscript review for <em>New Media &amp; Society</em>, <em> Journal of Information Technology & Politics, <em>Oxford Intersections: Social Media in Society and Culture</em>; <em>British Journal of Sociology</em>, <em>Humanities and Social Sciences Communications</em>, <em>Asian Journal of Social Science</em>, <em>Asia Pacific Media Educator</em>, <em>Culture and Society in South Asia</em>, and <em>Journal of Creative Communication</em>.</p>
+<p class="measure"> Conference paper review for ICA (2019–2021, 2023–2025) and NCA (2019–2025) across divisions including Global Communication and Social Change, Computational Methods, Communication and Technology, Communication Law and Policy, Critical and Cultural Studies, and Activism and Social Justice.</p>
+      <ul class="taglist" style="margin-top:var(--s4)">
+        <li>Thesis and Dissertation Award Committee, HCTD, NCA</li>
+        <li>Faculty Affairs and Development Committee, Saint Mary's College</li>
+        <li>Advisory Faculty, Institutional AI Taskforce, Saint Mary's College</li>
+        <li>President's Special Task Force on Generative AI, JMU (2023–2024)</li>
+        <li>Global Studies Steering Committee, Saint Mary's College</li>
+      </ul>
+    </div>
+  </section>`;
+}
+
+function pageTeaching(){
+  return `
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Teaching</p>
+      <h1 style="max-width:24ch">Education as a transformative act of co-creation</h1>
+    </div>
+  </section>
+
+  <section class="section--paper" style="padding:var(--s7) 0">
+    <div class="wrap measure">
+      <p class="eyebrow">Statement of teaching philosophy</p>
+      <p>Drawing on Paulo Freire, I understand teaching not as the transmission of knowledge but as a collaborative pursuit of understanding that cultivates agency, empathy, and critical awareness. Education must expand beyond acquisition to nurture the capacity to question, to connect, and to create social change.</p>
+      <p>As a first-generation college graduate from a historically underserved community, I have seen how access to education redefines the boundaries of possibility. That experience shapes my conviction that classrooms should be spaces of inclusion and liberation, where every student's voice counts as evidence and dialogue across difference becomes a catalyst for deeper learning. Critical inquiry and belonging are not opposites; they are mutually reinforcing conditions for intellectual growth.</p>
+      <p>Recent training through Essential Partners and the ACUE certification in Fostering a Culture of Belonging has changed how I design classrooms. The ACUE course helped me identify and address barriers such as microaggressions and imposter syndrome; the Essential Partners framework gave me tools for structured dialogue across difference. Applied this semester in the AI and the Future of Communication seminar, the results were visible: participation became more equitable, discussion more thoughtful, and students more confident articulating perspectives that differ from their own.</p>
+      <p>Inclusivity is a daily practice rather than a principle. I diversify course materials across gender, race, and geography, then ask students to compare those perspectives against their own experience. Collaboration is a second cornerstone — small teams producing research-based work that simulates professional environments and teaches students to listen across difference. Practice-based learning is a third: case studies, simulations, and community-engaged projects in which students apply concepts to real problems and discover that communication is a civic practice with ethical stakes.</p>
+      <p>Technology serves as a platform for critical exploration rather than a distraction. Students analyze their own feeds to detect algorithmic bias, present data ethically with open-source tools, and build accessible multimodal projects. Underlying all of it is continuous improvement: mid-semester feedback, evaluation analysis, restructured scaffolding, and modular course design with clear weekly goals.</p>
+      <p>Education, to me, is an act of shared transformation. Through curiosity, dialogue, and care, I hope students come to see communication not merely as a skill or a discipline but as a form of freedom.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Teaching interests</p>
+      <h2>Areas</h2>
+      <ul class="taglist" style="margin-bottom:var(--s7)">
+        ${["AI and the future of communication","Critical issues in mass communication","Intercultural and global communication","Argumentation and advocacy","Public communication","Communication research methods","Culture and health communication","Media, democracy, and social change","Ethical and responsible use of AI"].map(t=>`<li>${esc(t)}</li>`).join('')}
+      </ul>
+
+      <p class="eyebrow">Featured courses</p>
+      <h2>Currently teaching</h2>
+      <div class="cards">
+        ${courses.map(c=>`<article class="card">
+          <span class="code">${esc(c.inst)}${c.tag?' · '+esc(c.tag):''}</span>
+          <h3>${esc(c.title)}</h3>
+          <p>${esc(c.premise)}</p>
+          <p class="eyebrow" style="margin:0 0 6px">In practice</p>
+          <ul>${c.focus.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
+        </article>`).join('')}
+      </div>
+
+      <p class="eyebrow" style="margin-top:var(--s7)">Previously taught</p>
+      <ul class="simple-list">
+        ${pastCourses.map(c=>`<li>${esc(c)}</li>`).join('')}
+      </ul>
+
+      <p class="eyebrow" style="margin-top:var(--s7)">Advising and pedagogical training</p>
+      <p class="measure">Summer Faculty Adviser & Faculty Advising Fellow, Saint Mary's College. Training includes FYS Dialogue Across Differences (Essential Partners, 2025), the ACUE course on Fostering a Culture of Belonging (2024), Computational Text Analysis in Python (University of Maryland, 2023), and a Racial Equity Institute workshop on structural racism (2019).</p>
+    </div>
+  </section>`;
+}
+
+function pageProjects(){
+  const cls = s => s==='active'?'pill--active':s==='progress'?'pill--review':s==='developing'?'pill--prep':'pill--past';
+  const stateLabel = {current:'Current', planned:'In development', past:'Past affiliation'};
+  const stateCls = {current:'pill--active', planned:'pill--prep', past:'pill--past'};
+  return `
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Projects &amp; Initiatives</p>
+      <h1 style="max-width:22ch">Work currently underway</h1>
+      <p class="measure">Active research, curriculum development, and institutional work. Status is stated plainly: manuscripts in preparation are described in general terms, and nothing is listed as an output until it exists.</p>
+    </div>
+  </section>
+
+  <section class="section--paper" style="padding:var(--s7) 0">
+    <div class="wrap">
+      <p class="eyebrow">Ongoing projects</p>
+      ${projects.map(p=>`<article class="entry">
+        <div class="apparatus">
+          <dl><dt>Status</dt><dd><span class="pill ${cls(p.status)}">${esc(p.label)}</span></dd></dl>
+          <dl><dt>Theme</dt><dd>${esc(themeTitle(p.theme))}</dd></dl>
+          <dl><dt>Period</dt><dd>${esc(p.period)}</dd></dl>
+          ${p.funding?`<dl><dt>Support</dt><dd>${esc(p.funding)}</dd></dl>`:''}
+        </div>
+        <div class="entry-body">
+          <h3>${esc(p.title)}</h3>
+          <p>${esc(p.summary)}</p>
+          ${p.venue?`<p style="font-size:.88rem;color:var(--slate-600);margin:0"><span class="eyebrow" style="display:inline;margin:0">Target venue</span> &nbsp;<em>${esc(p.venue)}</em></p>`:''}
+        </div>
+      </article>`).join('')}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Centers, platforms, and initiatives</p>
+      <h2>Institutional ecosystem</h2>
+      <p class="measure">Platforms this work connects to. This site is not the official home of any of them; each links out to its own record where one exists.</p>
+      <div class="cards" style="margin-top:var(--s5)">
+        ${initiatives.map(i=>`<article class="card">
+          <span class="pill ${stateCls[i.state]}" style="margin-bottom:var(--s3)">${stateLabel[i.state]}</span>
+          <h3 style="margin-top:var(--s3)">${esc(i.name)}</h3>
+          <p style="color:var(--slate-600);font-family:var(--display);font-size:.84rem;font-weight:500">${esc(i.role)}</p>
+          <p style="font-size:.94rem;margin-bottom:0">${esc(i.body)}</p>
+          ${i.link?`<p style="margin:var(--s3) 0 0"><a href="${i.link}" rel="noopener" style="font-family:var(--display);font-size:.84rem;font-weight:500">Visit ${esc(i.name)} →</a></p>`:''}
+        </article>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">Grants and funded work</p>
+      <h2>Support</h2>
+      <ul class="simple-list">
+        <li><span class="yr">2026</span>Faculty Summer Research Grant, Saint Mary's College — $2,500</li>
+        <li><span class="yr">2025</span>First Year Seminar Program Grant, <em>Communicating in the Age of Artificial Intelligence</em>, Saint Mary's College — $5,000</li>
+        <li><span class="yr">2020</span>VIVA Course Redesign Mini-Grant, Virtual Library of Virginia — collaborator</li>
+        <li><span class="yr">2018</span>Improving Agricultural Extension through Communication for Development, USAID — partnered through Bowling Green State University</li>
+        <li><span class="yr">2016</span>Travel Grant, Ministry of Foreign Affairs, Norway — IAMCR, Leicester</li>
+      </ul>
+    </div>
+  </section>`;
+}
+
+let pubState = {type:'all', theme:'all', year:'all', q:''};
+
+function pubList(){
+  const items = publications.filter(p=>{
+    if(pubState.type!=='all' && p.type!==pubState.type) return false;
+    if(pubState.theme!=='all' && !(p.themes||[]).includes(pubState.theme)) return false;
+    if(pubState.year!=='all' && String(p.year)!==String(pubState.year)) return false;
+    if(pubState.q){
+      const hay=[p.title,p.authors,p.venue,p.detail,p.significance].join(' ').toLowerCase();
+      if(!hay.includes(pubState.q.toLowerCase())) return false;
+    }
+    return true;
+  }).sort((a,b)=> b.year-a.year || a.title.localeCompare(b.title));
+
+  if(!items.length) return `<p class="empty">No records match these filters. Clear a filter to see more.</p>`;
+
+  return items.map(p=>`<article class="pub">
+    <div class="pub-meta">
+      <span class="pub-year">${p.year}</span>
+      <span class="pub-type">${esc(typeLabels[p.type])}${p.forthcoming?' · forthcoming':''}</span>
+      ${p.role?`<span class="pub-type" style="color:var(--gold-500)">${esc(p.role)}</span>`:''}
+    </div>
+    <div>
+      <h3 class="pub-title">${esc(p.title)}</h3>
+      <p class="citation">${citation(p)}</p>
+      ${p.significance?`<p class="significance">${esc(p.significance)}</p>`:''}
+      ${(p.themes&&p.themes.length)?`<ul class="taglist" style="margin-bottom:12px">${p.themes.map(t=>`<li>${esc(themeTitle(t))}</li>`).join('')}</ul>`:''}
+      <div class="pub-actions">
+        ${p.doi?`<a href="https://doi.org/${p.doi}" rel="noopener">DOI: ${p.doi}</a>`:''}
+        ${p.url?`<a href="${p.url}" rel="noopener">Read online</a>`:''}
+        <button type="button" data-cite="${p.slug}">Copy citation</button>
+      </div>
+    </div>
+  </article>`).join('');
+}
+
+function pagePublications(){
+  const years=[...new Set(publications.map(p=>p.year))].sort((a,b)=>b-a);
+  const counts = Object.entries(typeLabels).map(([k,v])=>({k,v,n:publications.filter(p=>p.type===k).length}));
+  return `
+  <section class="section" style="padding-bottom:var(--s5)">
+    <div class="wrap">
+      <p class="eyebrow">Publications</p>
+      <h1 style="max-width:22ch">Scholarly and public output</h1>
+      <p class="measure">Journal articles, book chapters, manuscripts in preparation, refereed conference papers, and public scholarship. Where a DOI exists it is the canonical link; full text is hosted by the publisher.</p>
+
+      <div class="stat-row">
+        ${counts.map(c=>`<div class="stat"><b>${c.n}</b><span>${esc(c.v)}${c.n===1?'':'s'}</span></div>`).join('')}
+      </div>
+
+      ${corpusBand(true)}
+      <p class="eyebrow" style="margin-top:-28px">Select a year in the band to filter, or use the controls below</p>
+
+      <div class="filters">
+        <div class="field"><label for="f-q">Search</label>
+          <input id="f-q" type="search" placeholder="Title, author, venue, keyword" value="${esc(pubState.q)}"></div>
+        <div class="field"><label for="f-type">Type</label>
+          <select id="f-type"><option value="all">All types</option>
+            ${Object.entries(typeLabels).map(([k,v])=>`<option value="${k}"${pubState.type===k?' selected':''}>${v}</option>`).join('')}
+          </select></div>
+        <div class="field"><label for="f-theme">Research theme</label>
+          <select id="f-theme"><option value="all">All themes</option>
+            ${themes.map(t=>`<option value="${t.slug}"${pubState.theme===t.slug?' selected':''}>${esc(t.title)}</option>`).join('')}
+          </select></div>
+        <div class="field"><label for="f-year">Year</label>
+          <select id="f-year"><option value="all">All years</option>
+            ${years.map(y=>`<option value="${y}"${String(pubState.year)===String(y)?' selected':''}>${y}</option>`).join('')}
+          </select></div>
+        <p class="result-count" id="count" role="status" aria-live="polite"></p>
+      </div>
+
+      <div id="pubs">${pubList()}</div>
+    </div>
+  </section>`;
+}
+
+function pageMedia(){
+  const recent = publications.filter(p=>p.type==='conference' && p.year>=2022);
+  return `
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Media &amp; Talks</p>
+      <h1 style="max-width:22ch">Speaking and public engagement</h1>
+      <p class="measure">Conference papers, guest lectures, television panels, and public scholarship. Each entry states the role, the venue, and the date.</p>
+    </div>
+  </section>
+
+  <section class="section--paper" style="padding:var(--s7) 0">
+    <div class="wrap">
+      <p class="eyebrow">Recent conference presentations</p>
+      ${recent.map(p=>`<article class="entry">
+        <div class="apparatus">
+          <dl><dt>Year</dt><dd>${p.year}</dd></dl>
+          <dl><dt>Role</dt><dd>${esc(p.role || 'Presenter')}</dd></dl>
+        </div>
+        <div class="entry-body">
+          <h3 style="font-size:1.08rem">${esc(p.title)}</h3>
+          <p style="font-size:.94rem;color:var(--slate-600);margin:0">${esc(p.venue)}${p.detail?' · '+esc(p.detail):''}</p>
+        </div>
+      </article>`).join('')}
+      <p style="margin-top:var(--s5)"><a href="#/publications">See all refereed presentations →</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Media appearances</p>
+      <h2>Television and commentary</h2>
+      <div class="cards">
+        ${mediaItems.map(m=>`<article class="card">
+          <span class="code">${esc(m.period)} · ${esc(m.role)}</span>
+          <h3>${esc(m.program)}</h3>
+          <p style="color:var(--slate-600);font-family:var(--display);font-size:.86rem">${esc(m.outlet)}</p>
+          <p style="margin:0 0 var(--s4)">${esc(m.body)}</p>
+${m.video?`<div class="video-frame">
+  <iframe src="https://www.youtube-nocookie.com/embed/${esc(m.video)}"
+    title="${esc(m.program)} — ${esc(m.outlet)}"
+    loading="lazy" allowfullscreen
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>`:''}
+        </article>`).join('')}
+      </div>
+      <div class="notice">
+        <strong>Add source links</strong>
+        Episode links, recordings, or archive references would let visitors verify each appearance. Add them as they become available.
+      </div>
+
+      <p class="eyebrow" style="margin-top:var(--s7)">Public scholarship and invited talks</p>
+      <h2>Beyond the academy</h2>
+      <ul class="simple-list">
+        ${publications.filter(p=>p.type==='public').sort((a,b)=>b.year-a.year).map(p=>`
+          <li><span class="yr">${p.year}</span>${p.url?`<a href="${p.url}" rel="noopener">${esc(p.title)}</a>`:esc(p.title)} — ${esc(p.venue)}${p.detail?', '+esc(p.detail):''}</li>`).join('')}
+      </ul>
+
+      <p class="eyebrow" style="margin-top:var(--s7)">Guest lectures</p>
+      <ul class="simple-list">
+        ${talks.map(t=>`<li><span class="yr">${t.year}</span>${esc(t.title)} — ${esc(t.venue)}</li>`).join('')}
+      </ul>
+
+      <p class="eyebrow" style="margin-top:var(--s7)">Conference roles</p>
+      <ul class="simple-list">
+        ${conferenceRoles.map(r=>`<li><span class="yr">${r.year}</span>${esc(r.text)}</li>`).join('')}
+      </ul>
+
+      <p class="eyebrow" style="margin-top:var(--s7)">Gallery</p>
+      <h2>Documentation</h2>
+      <p class="measure">A restrained editorial grid for conference, teaching, and fieldwork photography. Each image needs a caption, date, credit, and permission on record. No images of students or private individuals without documented consent.</p>
+      <div class="gallery" style="margin-top:var(--s5)">
+        ${['NCA Denver 2025','ICA panel','Seminar teaching','TBN News 24 panel'].map(c=>`<div class="gal">${c}<br>caption · date · credit</div>`).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+
+function pageAdmin(){
+  return `<section class="section"><div class="wrap measure">
+    <p class="eyebrow">Private analytics</p>
+    <h1>Authenticated route</h1>
+    <p>This route is intentionally unimplemented in the prototype. A passphrase held in JavaScript or browser storage is not access control — anyone can read it in the page source.</p>
+    <p>In production, <code>/admin/analytics</code> should be protected by server- or platform-enforced authentication, returned with <code>noindex</code>, and backed by an analytics key that never reaches the client bundle.</p>
+    <p><a href="#/">← Back to the site</a></p>
+  </div></section>`;
+}
+
+/* ══════════════════════════════════════════════════════════
+   ROUTER
+   ══════════════════════════════════════════════════════════ */
+const views = {"#/":pageHome,"#/research":pageResearch,"#/teaching":pageTeaching,
+  "#/projects":pageProjects,"#/publications":pagePublications,"#/media":pageMedia,"#/admin":pageAdmin};
+
+function buildNav(){
+  const hash = location.hash || "#/";
+  document.getElementById('nav').innerHTML =
+    routes.map(([h,l])=>`<a href="${h}"${h===hash?' aria-current="page"':''}>${l}</a>`).join('');
+}
+
+function render(){
+  const hash = location.hash || "#/";
+  const view = views[hash] || (()=>`<section class="section"><div class="wrap measure">
+      <p class="eyebrow">Not found</p><h1>That page doesn't exist</h1>
+      <p>Try the <a href="#/">homepage</a> or the <a href="#/publications">publications index</a>.</p>
+    </div></section>`);
+  document.getElementById('main').innerHTML = view();
+  buildNav(); wire();
+  const label = (routes.find(r=>r[0]===hash)||[])[1];
+  document.title = (label && label!=='Home' ? label+' — ' : '') + 'Mohammad Ala-Uddin';
+  const nav=document.getElementById('nav');
+  nav.removeAttribute('data-open');
+  document.getElementById('menu').setAttribute('aria-expanded','false');
+  window.scrollTo(0,0);
+}
+
+function updatePubs(){
+  const list=document.getElementById('pubs'); if(!list) return;
+  list.innerHTML = pubList();
+  const n = list.querySelectorAll('.pub').length;
+  const c = document.getElementById('count');
+  if(c) c.textContent = `${n} record${n===1?'':'s'}`;
+  document.querySelectorAll('.corpus-year[data-year]').forEach(b=>{
+    const on = String(pubState.year)===b.dataset.year;
+    if(on) b.dataset.on='1'; else b.removeAttribute('data-on');
+    b.setAttribute('aria-pressed', String(on));
+  });
+  wireCite();
+}
+
+function wireCite(){
+  document.querySelectorAll('[data-cite]').forEach(btn=>{
+    btn.onclick=()=>{
+      const p = publications.find(x=>x.slug===btn.dataset.cite);
+      if(navigator.clipboard) navigator.clipboard.writeText(plain(p));
+      const old = btn.textContent;
+      btn.textContent = 'Citation copied';
+      setTimeout(()=>{btn.textContent = old;}, 1800);
+    };
+  });
+}
+
+function wire(){
+  const q = document.getElementById('f-q');
+  if(q){
+    q.oninput = e => { pubState.q = e.target.value; updatePubs(); };
+    document.getElementById('f-type').onchange = e => { pubState.type = e.target.value; updatePubs(); };
+    document.getElementById('f-theme').onchange = e => { pubState.theme = e.target.value; updatePubs(); };
+    document.getElementById('f-year').onchange = e => { pubState.year = e.target.value; updatePubs(); };
+    document.querySelectorAll('.corpus[data-clickable="1"] .corpus-year').forEach(b=>{
+      b.onclick = () => {
+        pubState.year = (String(pubState.year)===b.dataset.year) ? 'all' : b.dataset.year;
+        document.getElementById('f-year').value = pubState.year;
+        updatePubs();
+      };
+    });
+    updatePubs();
+  }
+  wireCite();
+}
+
+/* theme */
+let stored=null; try{ stored=localStorage.getItem('theme'); }catch(e){}
+function setTheme(t){
+  document.documentElement.dataset.theme=t;
+  const b=document.getElementById('theme');
+  b.setAttribute('aria-label', t==='dark'?'Switch to light theme':'Switch to dark theme');
+  b.textContent = t==='dark'?'◑':'◐';
+  try{ localStorage.setItem('theme',t); }catch(e){}
+}
+setTheme(stored || (window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+document.getElementById('theme').onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+
+/* mobile menu */
+const menuBtn=document.getElementById('menu');
+menuBtn.onclick=()=>{
+  const nav=document.getElementById('nav');
+  const open = nav.getAttribute('data-open')==='1';
+  if(open) nav.removeAttribute('data-open'); else nav.setAttribute('data-open','1');
+  menuBtn.setAttribute('aria-expanded', String(!open));
+};
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const nav=document.getElementById('nav');
+    if(nav.getAttribute('data-open')==='1'){
+      nav.removeAttribute('data-open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.focus();
+    }
+  }
+});
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+window.addEventListener('hashchange', render);
+render();
+</script>
+</body>
+</html>
