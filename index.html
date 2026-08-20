@@ -76,8 +76,8 @@ em{font-style:italic}
 .identity{font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--navy-900);border:0;white-space:nowrap}
 .identity span{color:var(--slate-600);font-weight:500}
-.nav{display:flex;align-items:center;gap:var(--s5)}
-.nav a{font-family:var(--display);font-size:.85rem;font-weight:500;color:var(--text);
+.nav{display:flex;align-items:center;gap:var(--s4)}
+.nav a{font-family:var(--display);font-size:1.04rem;font-weight:500;color:var(--text);
   padding:6px 0;border-bottom:2px solid transparent}
 .nav a:hover{border-bottom-color:var(--border)}
 .nav a[aria-current="page"]{color:var(--navy-900);font-weight:600;border-bottom-color:var(--blue-600)}
@@ -92,7 +92,7 @@ em{font-style:italic}
 .hero-grid{display:grid;grid-template-columns:minmax(230px,300px) 1fr;gap:clamp(28px,5vw,64px);align-items:center}
 .portrait{aspect-ratio:4/5;border-radius:var(--r-md);overflow:hidden;background:var(--surface);
   border:1px solid var(--border);display:grid;place-items:center}
-.portrait img{width:110%;height:110%;object-fit:cover;object-position:center 22%;display:block}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transform:scale(1.08);transform-origin:center 20%}
 .portrait-note{font-family:var(--display);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
   color:var(--slate-600);text-align:center;padding:0 var(--s4);line-height:1.8}
 .role{font-family:var(--display);font-size:1rem;font-weight:500;color:var(--slate-600);margin:0 0 var(--s5);line-height:1.55}
@@ -194,6 +194,21 @@ em{font-style:italic}
 
 /* ── MISC ───────────────────────────────────────────────── */
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--s4)}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--s5)}
+.media-grid figure{margin:0;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column}
+.media-frame{position:relative;aspect-ratio:16/9;background:var(--paper);overflow:hidden}
+.media-frame--photo{aspect-ratio:4/3}
+.media-frame img,.media-frame video,.media-frame iframe{position:absolute;inset:0;
+  width:100%;height:100%;border:0;display:block}
+.media-frame img{object-fit:cover}
+.media-frame video{object-fit:contain;background:#000}
+.media-grid figcaption{padding:var(--s4);display:flex;flex-direction:column;gap:5px;flex:1}
+.media-grid figcaption b{font-family:var(--display);font-size:.96rem;font-weight:600;
+  color:var(--navy-900);line-height:1.35}
+.media-grid figcaption .where{font-size:.9rem;color:var(--slate-600);margin:0}
+.media-grid figcaption .credit{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--slate-600);margin-top:auto;padding-top:6px}
 .gal{aspect-ratio:4/3;border:1px dashed var(--border);border-radius:var(--r-md);display:grid;place-items:center;
   color:var(--slate-600);font-family:var(--display);font-size:.68rem;letter-spacing:.09em;
 .video-frame{position:relative;aspect-ratio:16/9;border-radius:var(--r-sm);
@@ -226,12 +241,12 @@ html[data-theme="dark"] .site-footer a{color:var(--blue-600)}
 html[data-theme="dark"] .footer-base{border-top-color:var(--border)}
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
-@media(max-width:920px){
+@media(max-width:1060px){
   .menu-btn{display:grid}
   .nav{position:fixed;inset:66px 0 auto 0;background:var(--bg);border-bottom:1px solid var(--border);
     flex-direction:column;align-items:stretch;gap:0;padding:var(--s4) clamp(20px,5vw,48px) var(--s6);display:none}
   .nav[data-open="1"]{display:flex}
-  .nav a{padding:14px 0;border-bottom:1px solid var(--rule);font-size:1rem}
+  .nav a{padding:15px 0;border-bottom:1px solid var(--rule);font-size:1.06rem}
   .nav a[aria-current="page"]{border-bottom-color:var(--blue-600)}
   .hero-grid{grid-template-columns:1fr;text-align:center;justify-items:center}
   .portrait{max-width:250px;width:100%}
@@ -362,7 +377,7 @@ const themes = [
 
 const frameworks = [
   {name:"Communication as Critical Freedom (CCF)", kind:"Theoretical framework",
-   body:"CCF reconceptualizes communication as the central capability through which human freedoms are enacted, constrained, or contested. Critical communicative freedom is defined as the capability to have voice, to be recognized, to exercise counter-power, and to secure legitimacy — together forming what the framework calls a fulcrum of justice. Developed in the dissertation; a full theoretical manuscript is currently under review for publication at the Journal of Communication.",
+   body:"CCF reconceptualizes communication as the central capability through which human freedoms are enacted, constrained, or contested. Critical communicative freedom is defined as the capability to have voice, to be recognized, to exercise counter-power, and to secure legitimacy — together forming what the framework calls a fulcrum of justice. Developed in the dissertation; a full theoretical manuscript is currently under review for publication at Communication Theory.",
    sources:"Habermasian discourse ethics · Foucauldian power · Sen's capabilities approach · post- and decolonial theory"},
   {name:"Computational–Critical Discourse Analysis (CDA-C)", kind:"Methodological framework",
    body:"CDA-C integrates LLM-based text embeddings, clustering, and stance profiling with critical discourse analysis in two interlinked phases: computational discovery, then critical interpretation. Model outputs are treated as heuristic starting points, not objective findings, so that large corpora can be read at scale without losing attention to power, ideology, and representation. Applied to fifteen years of Bangladeshi and Norwegian policy and news discourse, and to 3,399 articles on the July 2024 uprising.",
@@ -371,7 +386,7 @@ const frameworks = [
 
 const projects = [
   {title:"Communication as Critical Freedom", status:"active", label:"Manuscript under review",
-   period:"Ongoing", venue:"Journal of Communication",
+   period:"Ongoing", venue:"Communication Theory",
    summary:"A normative framework reconceptualizing communicative freedom as a capability grounded in voice, recognition, counter-power, and legitimacy, applied to AI content moderation, misinformation, and civic silence.",
    theme:"communication-freedom"},
   {title:"CDA-C: Toward a \u201Cthick\u201D reading of data", status:"active", label:"Manuscript in preparation",
@@ -480,7 +495,7 @@ const publications = [
   /* ── Manuscripts in preparation ── */
   {type:"manuscript", year:2026, slug:"ccf-manuscript",
    title:"Communication as critical freedom: Voice, power, and capability for justice",
-   authors:"Ala-Uddin, M.", venue:"Manuscript under review", detail:"Journal of Communication",
+   authors:"Ala-Uddin, M.", venue:"Manuscript under review", detail:"Communication Theory",
    themes:["communication-freedom"]},
   {type:"manuscript", year:2026, slug:"cdac-manuscript",
    title:"Unveiling contextual depths in textual corpora: A computational-critical discourse analysis toward a \u201Cthick\u201D reading of data",
@@ -646,11 +661,36 @@ const talks = [
 
 const mediaItems = [
   {period:"2024–present", outlet:"TBN News 24", program:"Our Democracy", role:"Recurring panel guest",
-   body:"Discussions on democracy, governance, and media in the United States and South Asia."},
+   body:"Discussions on democracy, governance, and media in the United States and South Asia.",
+   video:"ug6x1bSbW4g"},
   {period:"2024", outlet:"TBN News 24", program:"Road to White House", role:"Panel guest",
    body:"Election coverage panels, November 2 and November 4."},
   {period:"2011", outlet:"Diganta Television", program:"Religious Thoughts", role:"Panelist",
    body:"Religiosity, free expression, and modernity."}
+];
+
+/* ── Gallery: photos and short clips ──────────────────────
+   kind: "image"   → src is a file in your images/ folder
+         "youtube" → id is the string after v= in the URL
+         "clip"    → src is an .mp4 in your clips/ folder
+   Delete any entry you don't have yet; the grid adapts.
+   ─────────────────────────────────────────────────────── */
+const gallery = [
+  {kind:"youtube", id:"zJDISOFGaCE",
+   title:"Panel discussion on democracy and media",
+   where:"Our Democracy, TBN News 24", date:"2025", credit:"Courtesy TBN News 24"},
+
+  {kind:"image", src:"images/nca-2025-panel.jpg",
+   title:"Chairing \u201CFrom Rights Movement to Regime Change\u201D",
+   where:"NCA Annual Convention, Denver, CO", date:"November 2025", credit:"Photo credit \u2014 add"},
+
+  {kind:"image", src:"images/ica-2025.jpg",
+   title:"Presenting on news media and authoritarianism",
+   where:"ICA Annual Conference, Denver, CO", date:"2025", credit:"Photo credit \u2014 add"},
+
+  {kind:"clip", src:"clips/nca-2025-talk.mp4", poster:"images/nca-2025-poster.jpg",
+   title:"Opening remarks, Gen-Z revolution panel",
+   where:"NCA Annual Convention, Denver, CO", date:"November 2025", credit:"Recorded with permission"}
 ];
 
 const conferenceRoles = [
@@ -668,7 +708,7 @@ const typeLabels = {article:"Journal article", chapter:"Book chapter",
 const spotlight = [
   {kind:"Recognition", meta:"2026 · NCA", title:"Top Paper Award",
    body:"The Philosophy of Communication, Theory, Critique Division of the National Communication Association recognizes Communication as Critical Freedom as Top Paper at the 2026 convention in New Orleans, LA.", href:"#/research"},
-  {kind:"Theoretical Framework", meta:"Under review · Journal of Communication", title:"Communication as Critical Freedom",
+  {kind:"Theoretical Framework", meta:"Under review · Communication Theory", title:"Communication as Critical Freedom",
    body:"A normative framework treating communicative freedom as a capability: voice, recognition, counter-power, legitimacy.", href:"#/research"},
   {kind:"Forthcoming chapter", meta:"Bloomsbury Academic", title:"Discursive power and digital repression",
    body:"How nine media systems narrated the communication blackouts during Bangladesh's July 2024 uprising — 3,399 articles read through CDA-C.", href:"#/publications"},
@@ -1050,6 +1090,31 @@ function pagePublications(){
   </section>`;
 }
 
+function galleryFigure(g){
+  let frame='';
+  if(g.kind==='youtube'){
+    frame=`<div class="media-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/${esc(g.id)}"
+        title="${esc(g.title)}" loading="lazy" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
+  } else if(g.kind==='clip'){
+    frame=`<div class="media-frame">
+      <video controls preload="none"${g.poster?` poster="${esc(g.poster)}"`:''}>
+        <source src="${esc(g.src)}" type="video/mp4">
+        Your browser cannot play this clip. <a href="${esc(g.src)}">Download it instead.</a>
+      </video></div>`;
+  } else {
+    frame=`<div class="media-frame media-frame--photo">
+      <img src="${esc(g.src)}" alt="${esc(g.title)}" loading="lazy"></div>`;
+  }
+  return `<figure>${frame}<figcaption>
+      <b>${esc(g.title)}</b>
+      <p class="where">${esc(g.where)}${g.date?' \u00B7 '+esc(g.date):''}</p>
+      ${g.credit?`<p class="credit">${esc(g.credit)}</p>`:''}
+    </figcaption></figure>`;
+}
+
 function pageMedia(){
   const recent = publications.filter(p=>p.type==='conference' && p.year>=2022);
   return `
@@ -1120,10 +1185,10 @@ ${m.video?`<div class="video-frame">
       </ul>
 
       <p class="eyebrow" style="margin-top:var(--s7)">Gallery</p>
-      <h2>Documentation</h2>
-      <p class="measure">A restrained editorial grid for conference, teaching, and fieldwork photography. Each image needs a caption, date, credit, and permission on record. No images of students or private individuals without documented consent.</p>
-      <div class="gallery" style="margin-top:var(--s5)">
-        ${['NCA Denver 2025','ICA panel','Seminar teaching','TBN News 24 panel'].map(c=>`<div class="gal">${c}<br>caption · date · credit</div>`).join('')}
+      <h2>Conferences, talks, and appearances</h2>
+      <p class="measure">Photographs and short clips from conference presentations, public talks, and broadcast appearances. Each carries a caption, venue, date, and credit. No images of students or private individuals appear without documented consent.</p>
+      <div class="media-grid" style="margin-top:var(--s5)">
+        ${gallery.map(galleryFigure).join('')}
       </div>
     </div>
   </section>`;
